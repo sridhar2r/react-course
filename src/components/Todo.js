@@ -13,13 +13,20 @@ function Todo(props) {
     setIsModalOpen(false);
   }
 
+  function deleteConfirmHandler() {
+    props.onDeleteConfirm(props.text);
+    closeModalHandler();
+  }
+
   return (
     <div className="card">
         <h2>{props.text}</h2>
         <div className="actions">
            <button className="btn" onClick={deleteHandler}>Delete</button>
         </div>
-        {isModalOpen && <Modal/>}
+        {isModalOpen && (
+        <Modal onCancel={closeModalHandler} onConfirm={deleteConfirmHandler}/>
+        )}
         {isModalOpen && <Backdrop onClick={closeModalHandler}/>}
     </div>
   );

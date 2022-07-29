@@ -43,6 +43,8 @@ h1, h2 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   width: 20rem;
+  margin: 1rem;
+  /* border: 1rem solid;*/
 }
 
 .actions {
@@ -70,4 +72,33 @@ h1, h2 {
   height: 100vh;
   top: 0;
   left: 0;
+}
+
+.flex-b {
+  display: flex;
+  flex-direction: row;
+}
+.add-icon {
+  padding-top: 25px;
+  margin:0px 10px;
+}
+
+.del-icon {
+  padding-top: 25px;
+  margin:0px 0px;
+}
+
+.inp-di {
+  display: flex;
+  flex-direction: row;
+}
+
+.inp {
+  margin: 0px 10px;
+}
+
+.btn-inp {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
 }
